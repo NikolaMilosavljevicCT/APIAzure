@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API.DataManagement</name>
+    </assembly>
+    <members>
+        <member name="M:API.DataManagement.Logger.Logger.#ctor">
+            <summary>
+            Base Constructor,
+            Will write logs in : Logs/Log.log
+            </summary>
+        </member>
+        <member name="M:API.DataManagement.Logger.Logger.#ctor(System.String)">
+            <summary>
+            Will write data in specific file.
+            Path: Logs/providedName.log
+            </summary>
+            <param name="file">Name of file you want date to be written to.</param>
+        </member>
+        <member name="M:API.DataManagement.Logger.Logger.#ctor(System.String,System.String)">
+            <summary>
+            Will write data in specific file, in specific folder.
+            Path: Logs/providedFolder/providedName.log
+            IMPORTANT: You must create folder first in Logs/
+            </summary>
+            <param name="folder">Name of folder where you want to put file</param>
+            <param name="file">Name of file you want date to be written to.</param>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetMaxID">
+            <summary>
+            Returns Max ID from tbl_list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.InsertIntoTblList(API.DataManagement.DTOs.CreateTableDto)">
+            <summary>
+            Insert new record in table TblList.
+            </summary>
+            <param name="newTable">Data recived from Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.CreateTable(API.DataManagement.DTOs.CreateTableDto)">
+            <summary>
+            Create new table in database ctickets.
+            </summary>
+            <param name="newTable">Data recived from Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllTableNames">
+            <summary>
+            Retrive all table names from tblList.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllColumns">
+            <summary>
+            Retrive all column from colList.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllDataTypes">
+            <summary>
+            Retrive all data types from ctickets.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.IfColumnExistInTable(API.DataManagement.DTOs.DataTransferObjectBase)">
+            <summary>
+            Check if colum allready exist in table.
+            </summary>
+            <param name="data">Data recived from Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.InsertIntoColList(API.DataManagement.DTOs.DataTransferObjectBase)">
+            <summary>
+            Insert new record in ColList
+            </summary>
+            <param name="data">Data recived from Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.CreateColumn(API.DataManagement.DTOs.DataTransferObjectBase)">
+            <summary>
+            Create new column in selected table.
+            </summary>
+            <param name="data">Data recived from Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.IsTableEmpty(System.String)">
+            <summary>
+            Check if table have records.
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeTableName(System.String,System.String)">
+            <summary>
+            Change table name in ctickets
+            </summary>
+            <param name="tableName"></param>
+            <param name="newTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeTableNameInTblList(System.String,System.String)">
+            <summary>
+            Update table name in tblList.
+            </summary>
+            <param name="tableName"></param>
+            <param name="newTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeTableNameInColList(System.String,System.String)">
+            <summary>
+            Update table name in ColList.
+            </summary>
+            <param name="tableName"></param>
+            <param name="newTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllColumnsFromSelectedTable(System.String)">
+            <summary>
+            Retrive all columns from selected table.
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllColumnsFromSelectedTableFromColList(System.String)">
+            <summary>
+            Retrive all columns from ColList table for selected table.
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetAllColumns(System.String)">
+            <summary>
+            Retrive all columns for selected table
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.IsColumnEmpty(System.String,System.String)">
+            <summary>
+            Check if Column is empty.
+            </summary>
+            <param name="columnName"></param>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeColumnNameInColList(System.String,System.String,System.String)">
+            <summary>
+            Change Column name in colList table
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="newColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeColumnNameInTable(System.String,System.String,System.String)">
+            <summary>
+            Change column name inside selected table.
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="newColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.GetColumnTypeForSelectedColumn(System.String,System.String)">
+            <summary>
+            Retrive data type of selected column.
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeColumnTypeInColList(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Update date type inside ColList for selected table and column.
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="oldDataType"></param>
+            <param name="newColumnName"></param>
+            <param name="newDataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.ChangeColumnTypeInTable(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Change coulmn type inside selected table.
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="oldDataType"></param>
+            <param name="newColumnName"></param>
+            <param name="newDataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.DataManagement.Repositories.MSSQLRepository.DateTimeToUnixTimestamp(System.DateTime)">
+            <summary>
+            metoda za konvertovanje DateTime to UnixTime -> koristimo je za parametre Create_Date i Last_Modified_Date
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
